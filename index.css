@@ -1,0 +1,59 @@
+a {
+
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none
+}
+
+a:visited {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.menu {
+    font-size: 48px;
+    width: 200px;
+    height: 100px;
+    background: #ccc;
+    text-align: center;
+    line-height: 90px;
+    color: aliceblue;
+    overflow-y: hidden
+}
+
+.menu:hover {
+    background: #A00;
+    color: #427eef;
+}
+
+.menu:active {
+    background: #5c0000;
+    color: #ffe34b
+}
+
+.menuText {
+    background: red;
+    position: relative;
+    top: 6px;
+    display: inline-block;
+
+}
+.menuText:hover{
+    animation: moveup100 1s 1;
+    color: wheat
+
+}
+
+@keyframes moveup100 {
+    from {
+        top: 0px;
+    }
+    to {
+        top: -100px;
+    }
+}
