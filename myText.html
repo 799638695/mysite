@@ -13,19 +13,38 @@
     <div id='picbox' class="row">
         <div id='minpic' class="col-xs-6 col-md-3">
             <a href="#" class="thumbnail">
-                <img id="yupian" src="img/%E5%9B%BE%E5%B1%82%203.png" alt="...">
+                <img id="tupian" src="img/%E5%9B%BE%E5%B1%82%203.png" alt="...">
                 <h4 id="wenzi">hello</h4>
             </a>
         </div>
     </div>
 </body>
 <script>
-// 克隆   $("#picbox").append($("#minpic").clone());
-//       $("#minpic").clone().appendTo($("#picbox"));
-    var fuben = $("#minpic").clone();
-    fuben.find("#wenzi").html("yahoo!");
-    fuben.find("#wenzi").css({color:"#34ddc9"});
-    fuben.find("#tupian").attr("src","img/图层11.png")；
-    fuben.appendTo($("#picbox"));
+    // 克隆   $("#picbox").append($("#minpic").clone());
+    //       $("#minpic").clone().appendTo($("#picbox"));
+    var yundong = {
+        src: "img/运动.png",
+        wenzi: "运动",
+    }
+
+    var rili = {
+        src: "img/日历.png",
+        wenzi: "日历",
+    }
+
+    var jihe = [yundong,rili,yundong,rili,yundong,rili,yundong,jihe];
+
+    function fuzhi(shuju) {
+        var fuben = $("#minpic").clone();
+        fuben.find("#wenzi").html(shuju.wenzi);
+        fuben.find("#wenzi").css({
+            color: "#34ddc9"
+        });
+        fuben.find('#tupian').attr('src', shuju.src);
+        fuben.appendTo($("#picbox"));
+    }
+    for(var i = 0;i < 8; i++){
+        fuzhi(jihe[i]);
+    }
 </script>
 </html>
